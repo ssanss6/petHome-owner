@@ -1,0 +1,61 @@
+.page {
+  padding-bottom: 160rpx;
+}
+
+.form {
+  margin: 24rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 8rpx 28rpx;
+}
+
+.field {
+  padding: 26rpx 0;
+  border-bottom: 1rpx solid #EAE5DF;
+}
+
+.field:last-child {
+  border-bottom: none;
+}
+
+.label {
+  display: block;
+  font-size: 24rpx;
+  color: #8C8680;
+  margin-bottom: 14rpx;
+}
+
+.req {
+  color: #C94A4A;
+}
+
+.input {
+  font-size: 28rpx;
+  color: #2D2A26;
+}
+
+.input.picker {
+  color: #2D2A26;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20rpx 28rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: #fff;
+  border-top: 1rpx solid #EAE5DF;
+}
+
+.save-btn {
+  background: #FF7A45;
+  color: #fff;
+  border-radius: 48rpx;
+  font-size: 30rpx;
+}
+
+.save-btn[disabled] {
+  opacity: 0.6;
+  color: #fff;
+}

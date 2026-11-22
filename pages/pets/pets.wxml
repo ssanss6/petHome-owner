@@ -1,0 +1,38 @@
+<view class="page">
+  <block wx:if="{{loggedIn}}">
+    <view class="head">
+      <text class="title">我的宠物</text>
+      <view class="add-btn" bindtap="onAdd">＋ 添加</view>
+    </view>
+
+    <view class="pet-list">
+      <view class="pet-card" wx:for="{{pets}}" wx:key="id">
+        <view class="avatar">{{item.species === '猫' ? '🐈' : '🐕'}}</view>
+        <view class="info">
+          <view class="name">{{item.name}} <text class="breed">{{item.breed}}</text></view>
+          <view class="meta">
+            <text wx:if="{{item.weight}}">{{item.weight}}kg</text>
+            <text wx:if="{{item.vaccineExpireDate}}">· 疫苗至 {{item.vaccineExpireDate}}</text>
+          </view>
+          <view class="note" wx:if="{{item.allergyNote}}">⚠️ {{item.allergyNote}}</view>
+        </view>
+        <view class="ops">
+          <text class="op" bindtap="onEdit" data-id="{{item.id}}">编辑</text>
+          <text class="op danger" bindtap="onDelete" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+
+      <view class="empty" wx:if="{{!loading && pets.length === 0}}">
+        还没有宠物，点右上角「添加」建档
+      </view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class="empty-page">
+      <view class="empty-icon">🐾</view>
+      <view class="empty-text">登录后管理你的宠物档案</view>
+      <button class="login-btn" bindtap="onLogin">微信登录</button>
+    </view>
+  </block>
+</view>

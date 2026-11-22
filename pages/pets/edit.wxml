@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="form">
+    <view class="field">
+      <text class="label">名字 <text class="req">*</text></text>
+      <input class="input" placeholder="宠物名字" value="{{form.name}}" bindinput="onInput" data-field="name" />
+    </view>
+
+    <view class="field">
+      <text class="label">物种</text>
+      <picker mode="selector" range="{{speciesOptions}}" value="{{speciesIndex}}" bindchange="onSpecies">
+        <view class="input picker">{{form.species}} ▾</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">品种</text>
+      <input class="input" placeholder="如：金毛 / 布偶" value="{{form.breed}}" bindinput="onInput" data-field="breed" />
+    </view>
+
+    <view class="field">
+      <text class="label">性别</text>
+      <picker mode="selector" range="{{genderOptions}}" value="{{genderIndex}}" bindchange="onGender">
+        <view class="input picker">{{genderOptions[genderIndex]}} ▾</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">体重(kg)</text>
+      <input class="input" type="digit" placeholder="如 28.5" value="{{form.weight}}" bindinput="onInput" data-field="weight" />
+    </view>
+
+    <view class="field">
+      <text class="label">生日</text>
+      <picker mode="date" value="{{form.birthDate}}" bindchange="onInput" data-field="birthDate">
+        <view class="input picker">{{form.birthDate || '选择日期'}} ▾</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">疫苗到期</text>
+      <picker mode="date" value="{{form.vaccineExpireDate}}" bindchange="onInput" data-field="vaccineExpireDate">
+        <view class="input picker">{{form.vaccineExpireDate || '选择日期'}} ▾</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">注意事项</text>
+      <input class="input" placeholder="过敏 / 忌口 / 特殊照顾" value="{{form.allergyNote}}" bindinput="onInput" data-field="allergyNote" />
+    </view>
+  </view>
+
+  <view class="footer">
+    <button class="save-btn" bindtap="onSave" loading="{{saving}}" disabled="{{saving}}">保存</button>
+  </view>
+</view>

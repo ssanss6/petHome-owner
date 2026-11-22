@@ -1,0 +1,134 @@
+.page {
+  padding-bottom: 40rpx;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 28rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #EAE5DF;
+}
+
+.head .title {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.add-btn {
+  background: #FF7A45;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 12rpx 26rpx;
+  border-radius: 40rpx;
+}
+
+.pet-list {
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.pet-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: #F1EEE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48rpx;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.breed {
+  font-size: 22rpx;
+  color: #8C8680;
+  font-weight: 400;
+  margin-left: 8rpx;
+}
+
+.meta {
+  font-size: 22rpx;
+  color: #8C8680;
+  margin-top: 8rpx;
+}
+
+.note {
+  font-size: 22rpx;
+  color: #D25B23;
+  margin-top: 6rpx;
+}
+
+.ops {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.op {
+  font-size: 22rpx;
+  color: #FF7A45;
+  padding: 8rpx 16rpx;
+  border: 1rpx solid #FFD3BF;
+  border-radius: 8rpx;
+  text-align: center;
+}
+
+.op.danger {
+  color: #C94A4A;
+  border-color: #F5C9C9;
+}
+
+.empty {
+  padding: 120rpx 0;
+  text-align: center;
+  color: #8C8680;
+  font-size: 26rpx;
+}
+
+.empty-page {
+  padding: 200rpx 60rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-icon {
+  font-size: 120rpx;
+}
+
+.empty-text {
+  margin-top: 20rpx;
+  color: #8C8680;
+  font-size: 26rpx;
+}
+
+.login-btn {
+  margin-top: 48rpx;
+  width: 100%;
+  background: #07c160;
+  color: #fff;
+  border-radius: 48rpx;
+}

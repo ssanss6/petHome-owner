@@ -29,13 +29,22 @@
         <text>我的宠物</text>
         <text class="muted" bindtap="onTapManage">管理 ›</text>
       </view>
-      <view class="pet-card">
-        <view class="pet-avatar">{{pet.icon}}</view>
-        <view class="pet-info">
-          <view class="n">{{pet.name}}</view>
-          <view class="d">{{pet.breed}} · {{pet.age}} · {{pet.weight}}</view>
-        </view>
-        <view class="tag">{{pet.vaccine}}</view>
+      <view class="pet-card" bindtap="onTapManage">
+        <block wx:if="{{pet}}">
+          <view class="pet-avatar">{{pet.icon}}</view>
+          <view class="pet-info">
+            <view class="n">{{pet.name}}</view>
+            <view class="d">{{pet.breed}} · {{pet.weight}}</view>
+          </view>
+          <view class="tag">{{pet.vaccine}}</view>
+        </block>
+        <block wx:else>
+          <view class="pet-avatar">🐾</view>
+          <view class="pet-info">
+            <view class="n">添加宠物</view>
+            <view class="d">点击管理宠物档案</view>
+          </view>
+        </block>
       </view>
     </view>
 
