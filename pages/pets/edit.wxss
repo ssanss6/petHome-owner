@@ -38,6 +38,38 @@
   color: #2D2A26;
 }
 
+.avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.avatar-preview {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  background: #F1EEE9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-preview image {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-plus {
+  font-size: 56rpx;
+  color: #BDB6AC;
+}
+
+.avatar-tip {
+  font-size: 26rpx;
+  color: #FF7A45;
+}
+
 .footer {
   position: fixed;
   left: 0;

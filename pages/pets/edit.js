@@ -1,4 +1,4 @@
-const { get, post, put } = require('../../utils/request');
+const { get, post, put, upload } = require('../../utils/request');
 
 Page({
   data: {
@@ -11,7 +11,8 @@ Page({
       weight: '',
       birthDate: '',
       vaccineExpireDate: '',
-      allergyNote: ''
+      allergyNote: '',
+      avatarUrl: ''
     },
     speciesOptions: ['犬', '猫', '其他'],
     speciesIndex: 0,
@@ -61,6 +62,24 @@ Page({
     this.setData({ genderIndex: i, 'form.gender': map[i] });
   },
 
+  onChooseAvatar() {
+    wx.chooseMedia({
+      count: 1,
+      mediaType: ['image'],
+      sizeType: ['compressed'],
+      success: (res) => {
+        const filePath = res.tempFiles[0].tempFilePath;
+        wx.showLoading({ title: '上传中' });
+        upload(filePath)
+          .then((data) => {
+            this.setData({ 'form.avatarUrl': data.url });
+            wx.hideLoading();
+          })
+          .catch(() => wx.hideLoading());
+      }
+    });
+  },
+
   onSave() {
     const { form, id } = this.data;
     if (!form.name) {
@@ -76,7 +95,8 @@ Page({
       weight: form.weight ? Number(form.weight) : null,
       birthDate: form.birthDate || null,
       vaccineExpireDate: form.vaccineExpireDate || null,
-      allergyNote: form.allergyNote
+      allergyNote: form.allergyNote,
+      avatarUrl: form.avatarUrl
     };
     const req = id ? put(`/pets/${id}`, payload) : post('/pets', payload);
     req

@@ -34,9 +34,41 @@ function request(options) {
   });
 }
 
+// 图片上传：本地文件 → 后端 /api/files/upload → 返回 {objectKey, url}
+function upload(filePath) {
+  return new Promise((resolve, reject) => {
+    const token = getToken();
+    wx.uploadFile({
+      url: BASE_URL + '/files/upload',
+      filePath,
+      name: 'file',
+      header: token ? { Authorization: 'Bearer ' + token } : {},
+      success(res) {
+        let body = null;
+        try {
+          body = JSON.parse(res.data);
+        } catch (e) {
+          /* ignore */
+        }
+        if (body && body.code === 0) {
+          resolve(body.data);
+        } else {
+          wx.showToast({ title: (body && body.message) || '上传失败', icon: 'none' });
+          reject(body || res);
+        }
+      },
+      fail(err) {
+        wx.showToast({ title: '上传失败', icon: 'none' });
+        reject(err);
+      }
+    });
+  });
+}
+
 module.exports = {
   get: (url, data) => request({ url, method: 'GET', data }),
   post: (url, data) => request({ url, method: 'POST', data }),
   put: (url, data) => request({ url, method: 'PUT', data }),
-  del: (url, data) => request({ url, method: 'DELETE', data })
+  del: (url, data) => request({ url, method: 'DELETE', data }),
+  upload
 };

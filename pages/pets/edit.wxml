@@ -1,6 +1,17 @@
 <view class="page">
   <view class="form">
     <view class="field">
+      <text class="label">头像</text>
+      <view class="avatar-row">
+        <view class="avatar-preview" bindtap="onChooseAvatar">
+          <image wx:if="{{form.avatarUrl}}" src="{{form.avatarUrl}}" mode="aspectFill" />
+          <text wx:else class="avatar-plus">＋</text>
+        </view>
+        <text class="avatar-tip" bindtap="onChooseAvatar">点击上传图片</text>
+      </view>
+    </view>
+
+    <view class="field">
       <text class="label">名字 <text class="req">*</text></text>
       <input class="input" placeholder="宠物名字" value="{{form.name}}" bindinput="onInput" data-field="name" />
     </view>
