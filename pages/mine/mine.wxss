@@ -1,0 +1,44 @@
+.mine {
+  padding: 24rpx;
+}
+.head {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 32rpx 28rpx;
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: #FFEFE7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48rpx;
+}
+.info {
+  flex: 1;
+}
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.sub {
+  font-size: 22rpx;
+  color: #8C8680;
+  margin-top: 6rpx;
+}
+.logout {
+  font-size: 22rpx;
+  color: #8C8680;
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #EAE5DF;
+  border-radius: 40rpx;
+}
+.arrow {
+  font-size: 40rpx;
+  color: #C4BDB4;
+}

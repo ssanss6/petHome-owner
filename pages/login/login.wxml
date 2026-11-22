@@ -1,0 +1,19 @@
+<view class="login-page">
+  <view class="logo">🐾</view>
+  <view class="title">宠物寄养洗护</view>
+  <view class="subtitle">微信授权登录，无需注册</view>
+
+  <input
+    class="nickname"
+    type="nickname"
+    placeholder="设置昵称（可选）"
+    value="{{nickname}}"
+    bindinput="onNicknameInput"
+  />
+
+  <button class="wx-btn" bindtap="onTapWxLogin" loading="{{loading}}" disabled="{{loading}}">
+    微信一键登录
+  </button>
+
+  <view class="agreement">登录即代表同意《用户协议》与《隐私政策》</view>
+</view>

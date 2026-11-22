@@ -1,0 +1,59 @@
+<view class="page">
+  <!-- 门店头部 -->
+  <view class="home-head">
+    <view class="store">{{store.name}}</view>
+    <view class="addr">{{store.addr}}</view>
+  </view>
+
+  <view class="body">
+    <!-- Banner -->
+    <view class="banner">
+      <view class="banner-title">{{banner.title}}</view>
+      <view class="banner-sub">{{banner.sub}}</view>
+    </view>
+
+    <!-- 服务入口（2 列） -->
+    <view class="entry-grid">
+      <view class="entry" wx:for="{{entries}}" wx:key="id" bindtap="onTapService" data-name="{{item.name}}">
+        <view class="ic">{{item.icon}}</view>
+        <view class="entry-info">
+          <view class="t">{{item.name}}</view>
+          <view class="s">{{item.desc}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 我的宠物 -->
+    <view class="card">
+      <view class="card-title">
+        <text>我的宠物</text>
+        <text class="muted" bindtap="onTapManage">管理 ›</text>
+      </view>
+      <view class="pet-card">
+        <view class="pet-avatar">{{pet.icon}}</view>
+        <view class="pet-info">
+          <view class="n">{{pet.name}}</view>
+          <view class="d">{{pet.breed}} · {{pet.age}} · {{pet.weight}}</view>
+        </view>
+        <view class="tag">{{pet.vaccine}}</view>
+      </view>
+    </view>
+
+    <!-- 推荐房型 -->
+    <view class="section">
+      <view class="section-head">
+        <text>推荐房型</text>
+        <text class="muted">全部 ›</text>
+      </view>
+      <scroll-view scroll-x class="hscroll">
+        <view class="room-card" wx:for="{{rooms}}" wx:key="id" bindtap="onTapService" data-name="{{item.name}}">
+          <view class="ph">{{item.icon}}</view>
+          <view class="info">
+            <view class="n">{{item.name}}</view>
+            <view class="p">¥{{item.price}}<text class="unit">/天</text></view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

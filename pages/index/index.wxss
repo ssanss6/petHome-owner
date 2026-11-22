@@ -1,0 +1,189 @@
+.page {
+  background: #F7F5F2;
+  min-height: 100vh;
+}
+
+/* 门店头部 */
+.home-head {
+  background: #fff;
+  padding: 20rpx 28rpx 24rpx;
+}
+.store {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #2D2A26;
+}
+.addr {
+  font-size: 22rpx;
+  color: #8C8680;
+  margin-top: 8rpx;
+}
+
+.body {
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+/* Banner */
+.banner {
+  height: 192rpx;
+  border-radius: 24rpx;
+  background: linear-gradient(120deg, #FFB088, #FF7A45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 36rpx;
+  color: #fff;
+}
+.banner-title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+.banner-sub {
+  font-size: 22rpx;
+  opacity: 0.92;
+  margin-top: 10rpx;
+}
+
+/* 服务入口 */
+.entry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+}
+.entry {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 28rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+.ic {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  background: #FFEFE7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+}
+.t {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #2D2A26;
+}
+.s {
+  font-size: 20rpx;
+  color: #8C8680;
+  margin-top: 4rpx;
+}
+
+/* 卡片 */
+.card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.muted {
+  font-size: 22rpx;
+  color: #8C8680;
+  font-weight: 400;
+}
+
+/* 宠物卡 */
+.pet-card {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+.pet-avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background: #F1EEE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  flex-shrink: 0;
+}
+.pet-info {
+  flex: 1;
+}
+.n {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.d {
+  font-size: 22rpx;
+  color: #8C8680;
+  margin-top: 4rpx;
+}
+.tag {
+  padding: 6rpx 16rpx;
+  border-radius: 40rpx;
+  font-size: 20rpx;
+  background: #E8F7EE;
+  color: #2E9E5B;
+  font-weight: 600;
+}
+
+/* 推荐房型 */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  font-weight: 600;
+  padding: 0 4rpx 18rpx;
+}
+.hscroll {
+  white-space: nowrap;
+}
+.room-card {
+  display: inline-block;
+  width: 256rpx;
+  margin-right: 20rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  vertical-align: top;
+}
+.ph {
+  height: 156rpx;
+  background: #F1EEE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60rpx;
+}
+.room-card .info {
+  padding: 16rpx 20rpx;
+}
+.room-card .n {
+  font-size: 24rpx;
+  font-weight: 600;
+}
+.room-card .p {
+  font-size: 26rpx;
+  color: #FF7A45;
+  font-weight: 700;
+  margin-top: 8rpx;
+}
+.room-card .unit {
+  font-size: 20rpx;
+  color: #8C8680;
+  font-weight: 400;
+}
