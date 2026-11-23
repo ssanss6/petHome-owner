@@ -1,0 +1,115 @@
+.page {
+  padding: 24rpx;
+  padding-bottom: 160rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 28rpx;
+}
+
+.card-title {
+  font-size: 26rpx;
+  color: #8C8680;
+  margin-bottom: 16rpx;
+}
+
+.picker-val {
+  font-size: 30rpx;
+  color: #2D2A26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  color: #BDB6AC;
+}
+
+.date-row {
+  display: flex;
+  align-items: center;
+}
+
+.date-row picker {
+  flex: 1;
+}
+
+.date-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  padding: 12rpx;
+  background: #FBF9F7;
+  border-radius: 12rpx;
+}
+
+.lbl {
+  font-size: 22rpx;
+  color: #8C8680;
+}
+
+.val {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2D2A26;
+}
+
+.date-mid {
+  width: 100rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #FF7A45;
+  background: #FFEFE7;
+  border-radius: 20rpx;
+  padding: 8rpx 0;
+  margin: 0 16rpx;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14rpx 0;
+  font-size: 26rpx;
+}
+
+.info-row .val {
+  color: #2D2A26;
+}
+
+.info-row .val.ok {
+  color: #2E9E5B;
+}
+
+.info-row .val.price {
+  color: #FF7A45;
+  font-weight: 700;
+  font-size: 34rpx;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20rpx 28rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: #fff;
+  border-top: 1rpx solid #EAE5DF;
+}
+
+.submit {
+  background: #FF7A45;
+  color: #fff;
+  border-radius: 48rpx;
+  font-size: 30rpx;
+}
+
+.submit[disabled] {
+  opacity: 0.6;
+  color: #fff;
+}

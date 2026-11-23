@@ -1,0 +1,57 @@
+<view class="page">
+  <!-- 宠物 -->
+  <view class="card">
+    <view class="card-title">寄养宠物</view>
+    <picker range="{{petNames}}" value="{{petIndex}}" bindchange="onPetChange">
+      <view class="picker-val">{{petIndex >= 0 ? petNames[petIndex] : '请选择宠物'}} <text class="arrow">▾</text></view>
+    </picker>
+  </view>
+
+  <!-- 房型 -->
+  <view class="card">
+    <view class="card-title">房型</view>
+    <picker range="{{roomNames}}" value="{{roomIndex}}" bindchange="onRoomChange">
+      <view class="picker-val">{{roomIndex >= 0 ? roomNames[roomIndex] : '请选择房型'}} <text class="arrow">▾</text></view>
+    </picker>
+  </view>
+
+  <!-- 日期 -->
+  <view class="card">
+    <view class="card-title">入住 / 离店</view>
+    <view class="date-row">
+      <picker mode="date" value="{{checkInDate}}" start="{{minDate}}" bindchange="onCheckInChange">
+        <view class="date-cell">
+          <text class="lbl">入住</text>
+          <text class="val">{{checkInDate || '选择日期'}}</text>
+        </view>
+      </picker>
+      <view class="date-mid">{{nights}} 晚</view>
+      <picker mode="date" value="{{checkOutDate}}" start="{{checkInDate || minDate}}" bindchange="onCheckOutChange">
+        <view class="date-cell">
+          <text class="lbl">离店</text>
+          <text class="val">{{checkOutDate || '选择日期'}}</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 库存与价格 -->
+  <view class="card">
+    <view class="info-row">
+      <text>可订笼位</text>
+      <text class="val {{availableCount > 0 ? 'ok' : ''}}">{{availableCount < 0 ? '选择日期后查询' : (availableCount > 0 ? availableCount + ' 间可订' : '已满房')}}</text>
+    </view>
+    <view class="info-row">
+      <text>入住晚数</text>
+      <text class="val">{{nights}} 晚</text>
+    </view>
+    <view class="info-row">
+      <text>合计</text>
+      <text class="val price">¥{{totalPrice}}</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <button class="submit" bindtap="onSubmit" loading="{{submitting}}" disabled="{{submitting}}">立即预订</button>
+  </view>
+</view>

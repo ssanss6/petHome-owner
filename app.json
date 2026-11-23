@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/login/login",
     "pages/pets/pets",
-    "pages/pets/edit"
+    "pages/pets/edit",
+    "pages/boarding/boarding"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

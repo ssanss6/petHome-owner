@@ -1,1 +1,24 @@
-<view class="empty">订单中心 · 开发中</view>
+<view class="page">
+  <block wx:if="{{loggedIn}}">
+    <view class="order" wx:for="{{orders}}" wx:key="id">
+      <view class="top">
+        <text class="no">{{item.orderNo}}</text>
+        <text class="status">{{item.statusText}}</text>
+      </view>
+      <view class="mid">{{item.checkInDate}} → {{item.checkOutDate}} · {{item.nights}} 晚</view>
+      <view class="bottom">
+        <text class="amount">¥{{item.baseAmount}}</text>
+        <text class="cage" wx:if="{{item.cageId}}">笼位已分配</text>
+      </view>
+    </view>
+    <view class="empty" wx:if="{{orders.length === 0}}">暂无订单，去首页预约寄养吧</view>
+  </block>
+
+  <block wx:else>
+    <view class="empty-page">
+      <view class="empty-icon"><van-icon name="orders-o" size="96rpx" color="#BDB6AC" /></view>
+      <view class="empty-text">登录后查看订单</view>
+      <button class="login-btn" bindtap="onLogin">微信登录</button>
+    </view>
+  </block>
+</view>

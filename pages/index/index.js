@@ -52,7 +52,15 @@ Page({
 
   onTapService(e) {
     const name = e.currentTarget.dataset.name || '该服务';
-    wx.showToast({ title: name + '（开发中）', icon: 'none' });
+    if (name === '寄养预约') {
+      if (!this.data.loggedIn) {
+        wx.navigateTo({ url: '/pages/login/login' });
+      } else {
+        wx.navigateTo({ url: '/pages/boarding/boarding' });
+      }
+    } else {
+      wx.showToast({ title: name + '（开发中）', icon: 'none' });
+    }
   },
 
   onTapManage() {
