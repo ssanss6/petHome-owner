@@ -5,7 +5,7 @@
       <view class="avatar-row">
         <view class="avatar-preview" bindtap="onChooseAvatar">
           <image wx:if="{{form.avatarUrl}}" src="{{form.avatarUrl}}" mode="aspectFill" />
-          <text wx:else class="avatar-plus">＋</text>
+          <van-icon wx:else name="photo-o" size="44rpx" color="#BDB6AC" />
         </view>
         <text class="avatar-tip" bindtap="onChooseAvatar">点击上传图片</text>
       </view>

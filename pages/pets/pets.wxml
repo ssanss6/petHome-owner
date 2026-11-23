@@ -9,7 +9,7 @@
       <view class="pet-card" wx:for="{{pets}}" wx:key="id">
         <view class="avatar">
           <image wx:if="{{item.avatarUrl}}" src="{{item.avatarUrl}}" mode="aspectFill" />
-          <text wx:else>{{item.species === '猫' ? '🐈' : '🐕'}}</text>
+          <van-icon wx:else name="smile-o" size="44rpx" color="#BDB6AC" />
         </view>
         <view class="info">
           <view class="name">{{item.name}} <text class="breed">{{item.breed}}</text></view>

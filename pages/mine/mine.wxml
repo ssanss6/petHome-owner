@@ -1,6 +1,6 @@
 <view class="mine">
   <view class="head" wx:if="{{loggedIn}}">
-    <view class="avatar">🐾</view>
+    <view class="avatar"><van-icon name="user-o" size="48rpx" color="#D25B23" /></view>
     <view class="info">
       <view class="name">你好，{{nickname}}</view>
       <view class="sub">欢迎回来</view>
@@ -8,7 +8,7 @@
     <view class="logout" bindtap="onLogout">退出登录</view>
   </view>
   <view class="head" wx:else bindtap="onTapLogin">
-    <view class="avatar">🐾</view>
+    <view class="avatar"><van-icon name="user-o" size="48rpx" color="#D25B23" /></view>
     <view class="info">
       <view class="name">点击登录</view>
       <view class="sub">微信一键登录</view>

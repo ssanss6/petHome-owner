@@ -15,7 +15,7 @@
     <!-- 服务入口（2 列） -->
     <view class="entry-grid">
       <view class="entry" wx:for="{{entries}}" wx:key="id" bindtap="onTapService" data-name="{{item.name}}">
-        <view class="ic">{{item.icon}}</view>
+        <view class="ic"><van-icon name="{{item.icon}}" size="44rpx" color="#D25B23" /></view>
         <view class="entry-info">
           <view class="t">{{item.name}}</view>
           <view class="s">{{item.desc}}</view>
@@ -31,7 +31,10 @@
       </view>
       <view class="pet-card" bindtap="onTapManage">
         <block wx:if="{{pet}}">
-          <view class="pet-avatar">{{pet.icon}}</view>
+          <view class="pet-avatar">
+            <image wx:if="{{pet.avatarUrl}}" src="{{pet.avatarUrl}}" mode="aspectFill" />
+            <van-icon wx:else name="smile-o" size="48rpx" color="#BDB6AC" />
+          </view>
           <view class="pet-info">
             <view class="n">{{pet.name}}</view>
             <view class="d">{{pet.breed}} · {{pet.weight}}</view>
@@ -39,7 +42,7 @@
           <view class="tag">{{pet.vaccine}}</view>
         </block>
         <block wx:else>
-          <view class="pet-avatar">🐾</view>
+          <view class="pet-avatar"><van-icon name="plus" size="48rpx" color="#BDB6AC" /></view>
           <view class="pet-info">
             <view class="n">添加宠物</view>
             <view class="d">点击管理宠物档案</view>
@@ -56,7 +59,7 @@
       </view>
       <scroll-view scroll-x class="hscroll">
         <view class="room-card" wx:for="{{rooms}}" wx:key="id" bindtap="onTapService" data-name="{{item.name}}">
-          <view class="ph">{{item.icon}}</view>
+          <view class="ph"><van-icon name="photo-o" size="56rpx" color="#C4BDB4" /></view>
           <view class="info">
             <view class="n">{{item.name}}</view>
             <view class="p">¥{{item.price}}<text class="unit">/天</text></view>
