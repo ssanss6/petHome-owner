@@ -30,6 +30,13 @@
   color: #BDB6AC;
 }
 
+.room-img {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 16rpx;
+  margin-top: 16rpx;
+}
+
 .date-row {
   display: flex;
   align-items: center;

@@ -59,7 +59,7 @@
       </view>
       <scroll-view scroll-x class="hscroll">
         <view class="room-card" wx:for="{{rooms}}" wx:key="id" bindtap="onTapService" data-name="{{item.name}}">
-          <view class="ph"><van-icon name="photo-o" size="56rpx" color="#C4BDB4" /></view>
+          <view class="ph"><image src="{{item.image}}" mode="aspectFill" /></view>
           <view class="info">
             <view class="n">{{item.name}}</view>
             <view class="p">¥{{item.price}}<text class="unit">/天</text></view>

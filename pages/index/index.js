@@ -1,5 +1,6 @@
 const { getToken } = require('../../utils/auth');
 const { get } = require('../../utils/request');
+const { ROOM_IMAGES } = require('../../config/images');
 
 Page({
   data: {
@@ -18,9 +19,9 @@ Page({
       { id: 2, icon: 'flower-o', name: '洗护预约', desc: '美容师时段可约' }
     ],
     rooms: [
-      { id: 1, name: '标准间', price: 88 },
-      { id: 2, name: '豪华间', price: 138 },
-      { id: 3, name: '猫咪房', price: 108 }
+      { id: 1, name: '标准间', price: 88, image: ROOM_IMAGES['标准间'] },
+      { id: 2, name: '豪华间', price: 138, image: ROOM_IMAGES['豪华间'] },
+      { id: 3, name: '猫咪房', price: 108, image: ROOM_IMAGES['猫咪房'] }
     ]
   },
 

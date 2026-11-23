@@ -1,4 +1,5 @@
 const { get, post } = require('../../utils/request');
+const { ROOM_IMAGES } = require('../../config/images');
 
 Page({
   data: {
@@ -37,6 +38,7 @@ Page({
 
   loadRooms() {
     get('/boarding/room-types').then((rooms) => {
+      rooms.forEach((r) => { r.image = ROOM_IMAGES[r.name] || ''; });
       this.setData({
         rooms,
         roomNames: rooms.map((r) => `${r.name} · ¥${r.dailyPrice}/天`),

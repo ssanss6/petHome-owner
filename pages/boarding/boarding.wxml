@@ -13,6 +13,7 @@
     <picker range="{{roomNames}}" value="{{roomIndex}}" bindchange="onRoomChange">
       <view class="picker-val">{{roomIndex >= 0 ? roomNames[roomIndex] : '请选择房型'}} <text class="arrow">▾</text></view>
     </picker>
+    <image wx:if="{{roomIndex >= 0 && rooms[roomIndex].image}}" class="room-img" src="{{rooms[roomIndex].image}}" mode="aspectFill" />
   </view>
 
   <!-- 日期 -->

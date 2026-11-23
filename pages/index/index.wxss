@@ -173,6 +173,12 @@
   align-items: center;
   justify-content: center;
   font-size: 60rpx;
+  overflow: hidden;
+}
+
+.ph image {
+  width: 100%;
+  height: 100%;
 }
 .room-card .info {
   padding: 16rpx 20rpx;
