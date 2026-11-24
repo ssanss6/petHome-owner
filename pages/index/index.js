@@ -53,12 +53,14 @@ Page({
 
   onTapService(e) {
     const name = e.currentTarget.dataset.name || '该服务';
+    if (!this.data.loggedIn) {
+      wx.navigateTo({ url: '/pages/login/login' });
+      return;
+    }
     if (name === '寄养预约') {
-      if (!this.data.loggedIn) {
-        wx.navigateTo({ url: '/pages/login/login' });
-      } else {
-        wx.navigateTo({ url: '/pages/boarding/boarding' });
-      }
+      wx.navigateTo({ url: '/pages/boarding/boarding' });
+    } else if (name === '洗护预约') {
+      wx.navigateTo({ url: '/pages/grooming/grooming' });
     } else {
       wx.showToast({ title: name + '（开发中）', icon: 'none' });
     }

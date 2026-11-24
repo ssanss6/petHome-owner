@@ -1,0 +1,57 @@
+.page {
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+}
+
+.card-title {
+  font-size: 24rpx;
+  color: #8C8680;
+  margin-bottom: 14rpx;
+}
+
+.picker-val {
+  font-size: 30rpx;
+  color: #30241F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  color: #BDB6AC;
+}
+
+.slot-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.slot {
+  padding: 14rpx 30rpx;
+  border-radius: 40rpx;
+  background: #F5F1EC;
+  font-size: 26rpx;
+  color: #6B625A;
+}
+
+.slot.on {
+  background: #FF7A45;
+  color: #fff;
+}
+
+.submit {
+  margin-top: 20rpx;
+  background: #FF7A45;
+  color: #fff;
+  border-radius: 48rpx;
+  font-size: 30rpx;
+}

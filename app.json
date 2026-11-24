@@ -7,6 +7,7 @@
     "pages/pets/pets",
     "pages/pets/edit",
     "pages/boarding/boarding",
+    "pages/grooming/grooming",
     "pages/care/care"
   ],
   "window": {

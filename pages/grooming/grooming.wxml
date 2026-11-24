@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="card">
+    <view class="card-title">宠物</view>
+    <picker range="{{petNames}}" value="{{petIndex}}" bindchange="onPetChange">
+      <view class="picker-val">{{petIndex >= 0 ? petNames[petIndex] : '请选择宠物'}} <text class="arrow">▾</text></view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="card-title">洗护服务</view>
+    <picker range="{{serviceNames}}" value="{{serviceIndex}}" bindchange="onServiceChange">
+      <view class="picker-val">{{serviceIndex >= 0 ? serviceNames[serviceIndex] : '请选择服务'}} <text class="arrow">▾</text></view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="card-title">美容师</view>
+    <picker range="{{groomerNames}}" value="{{groomerIndex}}" bindchange="onGroomerChange">
+      <view class="picker-val">{{groomerIndex >= 0 ? groomerNames[groomerIndex] : '请选择美容师'}} <text class="arrow">▾</text></view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="card-title">日期</view>
+    <picker mode="date" value="{{date}}" bindchange="onDateChange">
+      <view class="picker-val">{{date}} <text class="arrow">▾</text></view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="card-title">时段</view>
+    <view class="slot-row">
+      <view class="slot {{slotIndex === index ? 'on' : ''}}" wx:for="{{slots}}" wx:key="*this"
+            bindtap="onSlotTap" data-index="{{index}}">{{item}}</view>
+    </view>
+  </view>
+
+  <button class="submit" bindtap="submit">确认预约（模拟支付 ¥{{serviceIndex >= 0 ? services[serviceIndex].price : '--'}}）</button>
+</view>
