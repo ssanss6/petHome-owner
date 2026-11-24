@@ -1,6 +1,6 @@
 <view class="page">
   <block wx:if="{{loggedIn}}">
-    <view class="order" wx:for="{{orders}}" wx:key="id">
+    <view class="order" wx:for="{{orders}}" wx:key="id" bindtap="onTapOrder" data-id="{{item.id}}">
       <view class="top">
         <text class="no">{{item.orderNo}}</text>
         <text class="status">{{item.statusText}}</text>

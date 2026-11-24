@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="task" wx:for="{{tasks}}" wx:key="id">
+    <view class="top">
+      <text class="date">{{item.taskDate}}</text>
+      <text class="type">{{item.taskTypeDesc}}</text>
+      <text class="status {{item.status === 'DONE' ? 'ok' : ''}}">{{item.statusDesc}}</text>
+    </view>
+    <image wx:if="{{item.photoUrl}}" class="photo" src="{{item.photoUrl}}" mode="aspectFill" />
+    <text wx:if="{{item.note}}" class="note">{{item.note}}</text>
+  </view>
+  <view class="empty" wx:if="{{tasks.length === 0}}">暂无照护动态</view>
+</view>

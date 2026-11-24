@@ -6,7 +6,8 @@
     "pages/login/login",
     "pages/pets/pets",
     "pages/pets/edit",
-    "pages/boarding/boarding"
+    "pages/boarding/boarding",
+    "pages/care/care"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -20,9 +21,9 @@
     "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "list": [
-      { "pagePath": "pages/index/index", "text": "首页" },
-      { "pagePath": "pages/orders/orders", "text": "订单" },
-      { "pagePath": "pages/mine/mine", "text": "我的" }
+      { "pagePath": "pages/index/index", "text": "首页", "iconPath": "images/tabbar/home.png", "selectedIconPath": "images/tabbar/home-active.png" },
+      { "pagePath": "pages/orders/orders", "text": "订单", "iconPath": "images/tabbar/orders.png", "selectedIconPath": "images/tabbar/orders-active.png" },
+      { "pagePath": "pages/mine/mine", "text": "我的", "iconPath": "images/tabbar/mine.png", "selectedIconPath": "images/tabbar/mine-active.png" }
     ]
   },
   "usingComponents": {

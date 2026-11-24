@@ -37,5 +37,10 @@ Page({
 
   onLogin() {
     wx.navigateTo({ url: '/pages/login/login' });
+  },
+
+  onTapOrder(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({ url: `/pages/care/care?id=${id}` });
   }
 });
